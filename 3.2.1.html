@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+			<head>
+						<link rel="stylesheet" type="text/css" href="estlos.css">
+						<title>3.2.1 Entrada/Salida</title>
+			</head>
+					<body>
+							<header>
+							
+								<body style =" background-color: white; color: black; background attachment: fixed 100%; background-size: 100%; background-image: url(imagenes/fondo.jpg); link = # 32CD32; vlink = #32CD32; overflow: visible;" >	
+				
+								<h2 style ="font-family: courrier; color: white;   text-align: center;">3.2 Aplicaciones</h2> 
+
+								<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>	
+				
+
+									<a href="index.html" class="btn btn-primary">Inicio</a>
+									<a href="unidad3.html" class="btn btn-primary">Volver atr&aacute;s</a>
+			</header>
+
+									<center><h2>3.2.1 Entrada/Salida</h2></center>
+									<center>
+									Tanto en la E/S programada como la basada en interrupciones, la UCP debe encargarse de la transferencia de datos una vez que sabe que hay datos disponibles en el controlador. Una mejora importante para incrementar la concurrencia entre la UCP y la E/S consiste en que el controlador del dispositivo se pueda encargar de efectuar la transferencia de datos, liberando de este trabajo a la UCP, e interrumpir a la UCP s&oacute;lo cuando haya terminado la operaci&oacute;n completa de E/S. Esta t&eacute;cnica se denomina acceso directo a memoria (DMA, Direct Memory Access).
+<br><br>
+									Cuando se utiliza acceso directo a memoria, es el controlador el que se encarga directamente de transferir los datos entre el perif&eacute;rico y la memoria principal, sin requerir intervenci&oacute;n alguna por parte del procesador. Esta t&eacute;cnica funciona de la siguiente manera: cuando el procesador desea que se imprima un bloque de datos, env&iacute;a una orden al controlador indic&aacute;ndole la siguiente informaci&oacute;n:
+<br><br>
+									* Tipo de operaci&oacute;n: lectura o escritura.<br>
+									* Perif&eacute;rico involucrado en la operaci&oacute;n.<br>
+									* La direcci&oacute;n de memoria desde la que se va a leer o a la que va a escribir directamente con el controlador de dispositivo (direcci&oacute;n).<br>
+									* El n&uacute;mero de bytes a transferir (contador).<br>
+<br><br>
+									Donde el campo Operaci&oacute;n corresponde al c&oacute;digo de operaci&oacute;n de las instrucciones m&aacute;quina normal. Especifica la operaci&oacute;n que debe realizar la CCW. La unidad de control decodifica este campo y env&iacute;a las señales adecuadas de control al dispositivo. Existen varias operaciones, las m&aacute;s importantes son las siguientes:
+<br><br>
+									* Lectura: el canal transfiere a memoria principal un bloque de palabras de tamaño especificado en el campo nº de palabras, en orden ascendente de direcciones, empezando en la direcci&oacute;n especificada en el campo direcci&oacute;n del dato.<br>
+									* Escritura: el canal transfiere datos de memoria principal al dispositivo. Las palabras se transfieren en el mismo orden que en la operaci&oacute;n de lectura.<br>
+									* Control: se utiliza esta orden para enviar instrucciones espec&iacute;ficas al dispositivo de E/S, como rebobinar una cinta magn&eacute;tica, etc.<br>
+									* Bifurcaci&oacute;n: cumple en el programa de canal la misma funci&oacute;n que una instrucci&oacute;n de salto en un programa normal. El canal ejecuta las CCW en secuencia, salvo cuando aparece una CCW de este tipo, que utiliza el campo direcci&oacute;n del dato como la direcci&oacute;n de la siguiente CCW a ejecutar.<br>
+<br><br>
+									Los pasos a seguir en una operaci&oacute;n de E/S con DMA son los siguientes:<br>
+
+									1. Programaci&oacute;n de la operaci&oacute;n de E/S. Se indica al controlador la operaci&oacute;n, los datos a transferir y la direcci&oacute;n de memoria sobre la que se efectuar&aacute; la operaci&oacute;n.<br>
+
+									2. El controlador contesta aceptando la petici&oacute;n de E/S.<br>
+
+									3. El controlador le ordena al dispositivo que lea (para operaci&oacute;n de lectura) una cierta cantidad de datos desde una posici&oacute;n determinada del dispositivo a su memoria interna.<br>
+
+									4. Cuando los datos est&aacute;n listos, el controlador los copia a la posici&oacute;n de memoria que tiene en sus registros, incrementa dicha posici&oacute;n de memoria y decrementa el contador de datospendientes de transferir.
+									<br><br>
+									Los pasos 3 y 4 se repiten hasta que no quedan m&aacute;s datos por leer.
+
+									Cuando el registro de contador est&aacute; a cero, el controlador interrumpe a la UCP para in dicar que la operaci&oacute;n de DMA ha terminado.
+									
+									
+									<br><br>
+									<center><img src="imagenes/ess.gif" height="300" width="400"></center>
+
+									<center>
+									<br><br>
+
+				</body>
+</html>

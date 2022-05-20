@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+			<head>
+						<link rel="stylesheet" type="text/css" href="estlos.css">
+						<title>1.1.1 Cl&aacute;sicas</title>
+			</head>
+					<body>
+							<header>
+							
+								<body style =" background-color: white; color: black; background attachment: fixed 100%; background-size: 100%; background-image: url(imagenes/fondo.jpg); link = # 32CD32; vlink = #32CD32; overflow: visible;" >	
+				
+								<h2 style ="font-family: courrier; color: white;   text-align: center;">1.1 Modelos de Arquitectura de C&oacute;mputo</h2> 
+
+								<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>	
+				
+
+									<a href="index.html" class="btn btn-primary">Inicio</a>
+									<a href="unidad1.html" class="btn btn-primary">Volver atr&aacute;s</a>
+			</header>
+
+									<center><h2>1.1.1 Cl&aacute;sicas</h2></center>
+									<CENTER>Estas arquitecturas se desarrollaron en las primeras computadoras electromec&aacute;nicas y de tubos de vac&iacute;o. Aun son usadas en procesadores empotrados de gama baja y son la base de la mayor&iacute;a de las arquitecturas modernas. </CENTER>
+
+
+									<h2><center>Arquitectura Mauchly-Eckert (Von Newman)</center></h2>
+
+									<CENTER>Esta arquitectura fue utilizada en la computadora ENIAC. Consiste en una unidad central de proceso que se comunica a trav&eacute;s de un solo bus con un banco de memoria en donde se almacenan tanto los c&oacute;digos de instrucci&oacute;n del programa, como los datos que ser&aacute;n procesados por este. </centre>
+
+									<center>Ejemplo de esta versatilidad es el funcionamiento de los compiladores, los cuales son programas que toman como entrada un archivo de texto conteniendo c&oacute;digo fuente y generan como datos de salida, el c&oacute;digo m&aacute;quina que corresponde a dicho c&oacute;digo fuente (Son programas que crean o modifican otros programas).</CENTER>
+
+									<center><h2>Desventajas:</h2></center>
+									<center>Es que el bus de datos y direcciones  &uacute;nico se convierte en un cuello de botella por el cual debe pasar toda la informaci&oacute;n que se lee de o se escribe a la memoria, obligando a que todos los accesos a esta sean secuenciales.</center>
+
+									<center><img src="imagenes/von.png" height="200" width="400"></center>
+
+									<h2><center>Arquitectura Harvard</center></h2>
+
+									<center>
+									Esta arquitectura surgi&oacute; en la universidad del mismo nombre, poco despu&eacute;s de que la arquitectura Von Newman apareciera en la universidad de Princeton. Al igual que en la  arquitectura Von Newman, el programa se almacena como un c&oacute;digo num&eacute;rico en la memoria, pero no en el mismo espacio de memoria ni en el mismo formato que los datos. Por ejemplo, se pueden almacenar las instrucciones en doce bits en la memoria de programa, mientras los datos de almacenan en ocho bits en una memoria aparte.
+									</center>
+
+									<center><img src="imagenes/harvard.png" height="200" width="400"></center>
+
+									<center>
+									En la actualidad la mayor&iacute;a de los procesadores modernos se conectan al exterior de manera similar a a la arquitectura Von Newman, con un banco de memoria masivo &uacute;nico, pero internamente incluyen varios niveles de memoria cache con bancos separados en cache de programa y cache de datos, buscando un mejor desempeño sin perder la versatilidad.
+									</center>
+
+				</body>
+</html>

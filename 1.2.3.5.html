@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+			<head>
+						<link rel="stylesheet" type="text/css" href="estlos.css">
+						<title>1.2.3.5 Canales y procesadores de Entrada y Salida</title>
+			</head>
+					<body>
+							<header>
+							
+								<body style =" background-color: white; color: black; background attachment: fixed 100%; background-size: 100%; background-image: url(imagenes/fondo.jpg); link = # 32CD32; vlink = #32CD32; overflow: visible;" >	
+				
+								<h2 style ="font-family: courrier; color: white;   text-align: center;">1.2.3   Manejo de Entrada-Salida</h2> 
+
+								<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>	
+				
+
+									<a href="index.html" class="btn btn-primary">Inicio</a>
+									<a href="unidad1.html" class="btn btn-primary">Volver atr&aacute;s</a>
+			</header>
+
+									<center><h2>1.2.3.5 Canales y procesadores de Entrada y Salida</h2></center>
+									<center>
+									  
+									 <center><h2> </h2></center>
+									<br><br>
+									 Los canales de E/S son una mejora de los controladores de DMA. Pueden ejecutar instrucciones que leen directamente de memoria. Eso permite gestionar con m&aacute;s autonom&iacute;a las operaciones de E/S y de esta manera se pueden controlar m&uacute;ltiples operaciones de E/S con dispositivos con una m&iacute;nima intervenci&oacute;n del procesador.
+<br><br>
+									Estos canales todav&iacute;a se pueden hacer m&aacute;s complejos añadiendo una memoria local propia que los convierte en procesadores espec&iacute;ficos de E/S.
+<br><br>
+									La programaci&oacute;n de la operaci&oacute;n de E/S por parte del procesador se realiza escribiendo en memoria los datos y las instrucciones que necesita el canal de E/S para gestionar toda la operaci&oacute;n de E/S. La informaci&oacute;n que se especifica incluye el dispositivo al que tenemos que acceder, la operaci&oacute;n que se debe realizar indicando el nivel de prioridad, la direcci&oacute;n del bloque de datos donde tenemos que leer o escribir los datos que se han de transferir, el tamaño del bloque de datos que se tienen que transferir, c&oacute;mo se tiene que hacer el tratamiento de errores y c&oacute;mo se ha de informar al procesador del final de la operaci&oacute;n de E/S.
+<br><br>
+									Cuando se acaba la operaci&oacute;n de E/S, el canal de E/S informa al procesador de que se ha acabado la transferencia y de posibles errores mediante la memoria. Tambi&eacute;n se puede indicar el final de la transferencia mediante interrupciones.
+<br><br>
+									Las dos configuraciones b&aacute;sicas de canales de E/S son las siguientes:
+<br><br>
+									Canal selector: est&aacute; diseñado para perif&eacute;ricos de alta velocidad de transferencia y solo permite una operaci&oacute;n de transferencia simult&aacute;nea.
+<br><br>
+									Canal multiplexor: est&aacute; diseñado para perif&eacute;ricos m&aacute;s lentos de transferencia y puede combinar la transferencia de bloques de datos de diferentes dispositivos.
+<br><br>
+									Las ventajas principales de los canales de E/S respecto a los controladores de E/S son las siguientes:
+<br><br>
+									Permiten controlar operaciones de E/S simult&aacute;neas.
+<br><br>
+									Se pueden programar m&uacute;ltiples operaciones de E/S sobre diferentes dispositivos o secuencias de operaciones sobre el mismo dispositivo, mientras el canal de E/S efect&uacute;a otras operaciones de E/S.
+									
+									<br><br>
+									<center><img src="imagenes/canal.jpg" height="300" width="500"></center>
+
+									<center>
+									<br><br>
+
+				</body>
+</html>

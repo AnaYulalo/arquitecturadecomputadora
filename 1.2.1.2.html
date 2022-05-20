@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+			<head>
+						<link rel="stylesheet" type="text/css" href="estlos.css">
+						<title>1.2.1.2 Unidad Aritm&eacute;tica L&oacute;gica</title>
+			</head>
+					<body>
+							<header>
+							
+								<body style =" background-color: white; color: black; background attachment: fixed 100%; background-size: 100%; background-image: url(imagenes/fondo.jpg); link = # 32CD32; vlink = #32CD32; overflow: visible;" >	
+				
+								<h2 style ="font-family: courrier; color: white;   text-align: center;">1.2 An&aacute;lisis de los Componentes</h2> 
+
+								<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>	
+				
+
+									<a href="index.html" class="btn btn-primary">Inicio</a>
+									<a href="unidad1.html" class="btn btn-primary">Volver atr&aacute;s</a>
+			</header>
+
+									<center><h2>1.2.1.2 Unidad Aritm&eacute;tica L&oacute;gica</h2></center>
+									<center>
+									la unidad aritm&eacute;tica l&oacute;gica o unidad aritm&eacute;tico-l&oacute;gica, tambi&eacute;n conocida como ALU (siglas en ingl&eacute;s de arithmetic logic unit), es un circuito digital que realiza operaciones aritm&eacute;ticas (suma, resta) y operaciones l&oacute;gicas (SI, Y, O, NO) entre los valores de los argumentos (uno o dos)
+<br><br>
+									Por mucho, los circuitos electr&oacute;nicos m&aacute;s complejos son los que est&aacute;n construidos dentro de los chips de microprocesadores modernos. Por lo tanto, estos procesadores tienen dentro de ellos un ALU muy complejo y potente. De hecho, un microprocesador moderno (y los mainframes) puede tener m&uacute;ltiples n&uacute;cleos, cada n&uacute;cleo con m&uacute;ltiples unidades de ejecuci&oacute;n, cada una de ellas con m&uacute;ltiples ALU.
+<br><br>
+									Muchos otros circuitos pueden contener en el interior una unidad aritm&eacute;tico l&oacute;gica: unidades de procesamiento gr&aacute;fico como las que est&aacute;n en las GPU modernas, FPU como el viejo coprocesador matem&aacute;tico 80387, y procesadores digitales de señales como los que se encuentran en tarjetas de sonido, lectoras de CD y los televisores de alta definici&oacute;n. Todos estos tienen en su interior varias ALU potentes y complejas.
+									<br>
+									En la imagen se detalla una ALU de 2 bits con dos entradas (operandos) llamadas A y B: A[0] y B[0] corresponden al bit menos significativo y A[1] y B[1] corresponden al bit m&aacute;s significativo.
+
+									Cada bit de la ALU se procesa de manera id&eacute;ntica, con la excepci&oacute;n del direccionamiento del bit del acarreo. El manejo de este bit es explicado m&aacute;s adelante.
+
+									Las entradas A y B van hacia las cuatro puertas de la derecha, de arriba abajo, XOR, AND, OR. Las tres primeras puertas realizan las operaciones XOR, AND, y OR sobre los datos A y B. La &uacute;ltima puerta XOR es la puerta inicial de un sumador completo.
+
+									El paso final de las operaciones sobre cada bit es la multiplexaci&oacute;n de los datos. La entrada OP de 3 bits, OP[0], OP[1] y OP[2] (desde la unidad de control) determina cual de las funciones se van a realizar:
+									<br><br>
+									OP = 000 → XOR
+									<br>
+									OP = 001 → AND
+									<br>
+									OP = 010 → OR
+									<br>
+									OP = 011 → Adici&oacute;n
+									<br><br>
+									Claramente se ve que las otras cuatro entradas del multiplexor est&aacute;n libres para otras operaciones (sustracci&oacute;n, multiplicaci&oacute;n, divisi&oacute;n, NOT A, NOT B, etc). Aunque OP[2] actualmente no es usada en este montaje (a pesar de estar incluida y conectada), &eacute;sta ser&iacute;a usada en el momento de realizar otras operaciones adem&aacute;s de las 4 operaciones listadas arriba.
+<br>
+									Los datos de acarreo de entrada y acarreo de salida, llamados flags (banderas), son t&iacute;picamente conectados a alg&uacute;n tipo de registro de estado.
+									
+									<br><br>
+									<center><img src="imagenes/alu.png" height="370" width="600"></center>
+
+									<center>
+									<br><br>
+
+				</body>
+</html>

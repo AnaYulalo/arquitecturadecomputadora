@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+			<head>
+						<link rel="stylesheet" type="text/css" href="estlos.css">
+						<title>1.2.3.1 M&oacute;dulos de Entrada-Salida</title>
+			</head>
+					<body>
+							<header>
+							
+								<body style =" background-color: white; color: black; background attachment: fixed 100%; background-size: 100%; background-image: url(imagenes/fondo.jpg); link = # 32CD32; vlink = #32CD32; overflow: visible;" >	
+				
+								<h2 style ="font-family: courrier; color: white;   text-align: center;">1.2.3   Manejo de Entrada-Salida</h2> 
+
+								<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>	
+				
+
+									<a href="index.html" class="btn btn-primary">Inicio</a>
+									<a href="unidad1.html" class="btn btn-primary">Volver atr&aacute;s</a>
+			</header>
+
+									<center><h2>1.2.3.1 M&oacute;dulos de Entrada-Salida</h2></center>
+									<center>
+									  
+									 <center><h2> </h2></center>
+									<br><br>
+									 Un m&oacute;dulo de E/S tiene la responsabilidad de controlar uno o m&aacute;s dispositivos externos e intercambiar los datos entre esos dispositivos y la memoria central y/o los registros de la CPU. En consecuencia, el m&oacute;dulo de E/S debe tener una interfase interna al computador (al procesador y la memoria central) de alta velocidad y una interfase externa al computador (al dispositivo externo). Las funciones primordiales de un m&oacute;dulo de E/S: 
+									 
+									  <br><br>
+									 <ul>
+										<li>Control y Temporizaci&oacute;n (de estados) </li>
+										<li>Comunicaci&oacute;n con el procesador </li>
+										<li>Comunicaci&oacute;n con el dispositivo  </li>
+										<li>Buffering de datos </li>
+										<li>Detecci&oacute;n de errores. </li>
+										<li>Manejo de Interrupciones en el bajo nivel.</li>
+										
+									</ul>
+									 <br><br>
+ 
+									 Durante cualquier per&iacute;odo o instante, el procesador puede comunicarse con uno o m&aacute;s dispositivos externos (en rigor, con uno o m&aacute;s m&oacute;dulos de E/S) de manera impredecible, dependiendo de las necesidades de E/S de los programas que est&aacute;n ejecutando. Los recursos internos, como la memoria docsity.como el bus del sistema, deben ser compartidos entre un n&uacute;mero de actividades incluyendo a la E/S de datos.  Luego, la funci&oacute;n de E/S debe incluir un requerimiento de control y temporizaci&oacute;n, para coordinar el flujo del tr&aacute;fico de datos y señales entre los recursos internos y los dispositivos externos. Por ejemplo, el controlar la transferencia de datos desde un dispositivo externo y el procesador, puede incluir los siguientes pasos: 
+									 <br><br>
+									 1. El procesador interroga al m&oacute;dulo de E/S para verificar el estado (status) del dispositivo conectado. 
+									 <br>
+									 2. El m&oacute;dulo de E/S devuelve el estado del dispositivo. <br>
+									 3. Si el dispositivo est&aacute; operable y listo para transmitir, el procesador solicita la transferencia de datos, por medio de un comando al m&oacute;dulo de E/S. <br>
+									 4. El m&oacute;dulo de E/S obtiene una unidad de datos del dispositivo externo. <br>
+									 5. Los datos son transferidos desde el m&oacute;dulo de E/S al procesador. Si el sistema utiliza un bus, cada una de las interacciones entre el procesador y el m&oacute;dulo de E/S requieren de una o m&aacute;s arbitraciones del bus. <br>
+									 
+									 El simplificado escenario precedente tambi&eacute;n ilustra que el m&oacute;dulo de E/S debe tener la capacidad de ocuparse de la comunicaci&oacute;n con el procesador y el dispositivo externo. La comunicaci&oacute;n con el procesador incluye: 
+									 
+									 
+									 
+									 
+									 <ul>
+										<li>Decodificaci&oacute;n del comando: El m&oacute;dulo de E/S acepta comandos desde el procesador. Estos comandos generalmente son enviados como señales a trav&eacute;s del bus de control. </li>
+										<li>Datos: Los datos son intercambiados entre el procesador y el m&oacute;dulo de E/S a trav&eacute;s del bus de datos.</li>
+										<li>Informe de Estados: Las señales de estados m&aacute;s comunes son BUSY y READY. Puede haber tambi&eacute;n señales para informar varias condiciones de error. </li>
+										<li>Reconocimiento de direcciones: De la misma forma que cada palabra en la memoria tiene una direcci&oacute;n, tambi&eacute;n la tiene cada dispositivo de E/S. </li>
+										
+									</ul>
+							<br><br>
+									 En consecuencia, un m&oacute;dulo de E/S debe reconocer la direcci&oacute;n &uacute;nica asociada a cada perif&eacute;rico que controla. * Comunicaci&oacute;n con el  dispositivo.  El modulo de E/S debera hacer de buffer para equiparar las transferencias de datos a distintas velocidades y tambi&eacute;n es responsable de la detecci&oacute;n de errores e informar al procesador de dichos errores.  Un m&oacute;dulo de E/S que carga con la mayor&iacute;a de los detalles del procesamiento, presentando una interfase de alto nivel a la CPU, se conoce normalmente como un canal o un procesador de E/S. Un m&oacute;dulo de E/S que es bastante primitivo y requiere un control detallado, se conoce com&uacute;nmente como un controlador de E/S o un controlador de dispositivo. 
+	 
+									
+									<br><br>
+									<center><img src="imagenes/modulos.jpg" height="300" width="500"></center>
+
+									<center>
+									<br><br>
+
+				</body>
+</html>
